@@ -45,7 +45,7 @@ setInterval(function(){
 	// DateUsingHeader();
 	check();
 	console.log("loop");
-},5000);
+},120000);
 
 
 
