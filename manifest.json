@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "The Anvil Status",
+  "description": "See if anyone is at The Anvil",
+  "version": "1.0",
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "http://443256fc.ngrok.com/motion.jpg"
+  ]
+
+}
