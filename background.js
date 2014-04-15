@@ -2,15 +2,15 @@ function LastModUsingHeader(U) {
     var X = new XMLHttpRequest;
     var n = Math.floor(Math.random()*10000000);
     X.open('GET', "http://443256fc.ngrok.com/motion.jpg?"+n, false);
-    X.send();
-    var dt=X.getResponseHeader('Last-Modified');
-    var ct=X.getResponseHeader('Date'); 
-    // X.abort();
+	X.send();
+	var dt=X.getResponseHeader('Last-Modified');
+		var ct=X.getResponseHeader('Date'); 
+
     return  {
     			ct : ct,
     			dt : dt
     		};
-}
+};
 
 function check(){
 	var times=LastModUsingHeader('motion.jpg'); 
@@ -33,16 +33,13 @@ function check(){
 		console.log("nomotion");
 		chrome.browserAction.setIcon({path:"inactive.png"});
 	}
-	else if (currentTime === null){
-		console.log("no load");
+	else{
+     	console.log("broken");
 		chrome.browserAction.setIcon({path:"broken.png"});
-	}
+     }
 }
-
 check();
 setInterval(function(){
-	// LastModUsingHeader();
-	// DateUsingHeader();
 	check();
 	console.log("loop");
 },120000);
