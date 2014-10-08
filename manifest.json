@@ -12,7 +12,7 @@
     "scripts": ["background.js"]
   },
   "permissions": [
-    "http://443256fc.ngrok.com/motion.jpg"
+    "http://dev-ns.comr.se/health/check/ping"
   ]
 
 }
